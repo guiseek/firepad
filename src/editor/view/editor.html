@@ -1,0 +1,10 @@
+<aside data-ng-if="ctrl.children.length > 0">
+  <ul>
+    <li data-ng-repeat="child in ctrl.children">
+      <a href="{{ctrl.route + '/' + child}}" data-ng-bind="child"></a>
+    </li>
+  </ul>
+</aside>
+<form>
+  <textarea data-ng-model="ctrl.editor.text" data-ng-model-options="{ debounce: 1000 }" data-ng-change="ctrl.save()"></textarea>
+</form>
