@@ -4,7 +4,7 @@ export default class Editor {
     ,   key = `messages/${route}`
     ,   ref = firebase.database().ref(key)
     this.editor = $firebaseObject(ref)
-    this.route = route == '' ? '/#' : `/#/${route}`
+    this.route = route == '' ? '#' : `#/${route}`
     let children = []
     ref.once('value', response => {
       Object.keys(response.val()).map(function(k) {

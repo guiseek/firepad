@@ -126,7 +126,7 @@ var Editor = function Editor($stateParams, firebase, $firebaseObject) {
       key = 'messages/' + route,
       ref = firebase.database().ref(key);
   this.editor = $firebaseObject(ref);
-  this.route = route == '' ? '/#' : '/#/' + route;
+  this.route = route == '' ? '#' : '#/' + route;
   var children = [];
   ref.once('value', function (response) {
     Object.keys(response.val()).map(function (k) {
